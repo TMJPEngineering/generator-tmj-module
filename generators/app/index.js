@@ -14,10 +14,22 @@ module.exports = generator.extend({
         var commands = [{
             name: 'make',
             description: 'Generate new module'
+        }, {
+            name: 'make-controller',
+            description: 'Generate a new controller'
+        }, {
+            name: 'make-middleware',
+            description: 'Generate a new middleware'
+        }, {
+            name: 'make-route',
+            description: 'Generate a new route'
+        }, {
+            name: 'make-test',
+            description: 'Generate a new test'
         }];
 
         this.log(chalk.yellow('Usage:'));
-        this.log('  yo tmj-module:[command-name] [argument]\n');
+        this.log('  yo tmj-module:[command] [argument] [option]\n');
         this.log(chalk.yellow('Available commands:'));
 
         var spaces = 28;
