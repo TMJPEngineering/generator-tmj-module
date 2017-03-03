@@ -2,11 +2,12 @@
 
 var generator = require('yeoman-generator'),
     error = require('./../error'),
-    constants = require('./../constants');
+    constants = require('./../constants'),
+    custom = require('./../custom-prototypes');
 
 module.exports = generator.extend({
     initializing: function () {
-        error(this, ['route', 'module'], 'route');
+        error(this, ['schema', 'module'], 'schema');
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
     },
@@ -18,8 +19,8 @@ module.exports = generator.extend({
         };
 
         this.fs.copyTpl(
-            this.templatePath('route.js'),
-            this.destinationPath(constants.module.path + data.module + '/server/' + data.name + '.route.js'),
+            this.templatePath('schema.js'),
+            this.destinationPath(constants.module.path + data.module + '/server/' + data.name + '.schema.js'),
             data
         );
     }
