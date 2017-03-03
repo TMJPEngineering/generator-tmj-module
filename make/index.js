@@ -21,5 +21,13 @@ module.exports = generator.extend({
         this.composeWith('tmj-module:make-view', {
             arguments: ['index', name]
         });
+
+        this.composeWith('tmj-module:make-client-config', data);
+        this.composeWith('tmj-module:make-client-controller', data);
+        this.composeWith('tmj-module:make-client-directive', data);
+        this.composeWith('tmj-module:make-client-factory', data);
+        this.composeWith('tmj-module:make-client-module', data);
+        this.composeWith('tmj-module:make-client-provider', data);
+        this.composeWith('tmj-module:make-client-service', data);
     }
 });
