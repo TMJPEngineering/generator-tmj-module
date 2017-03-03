@@ -24,25 +24,25 @@ module.exports = generator.extend({
             name: 'make',
             description: 'Generate new module in server and client side'
         }, {
-            name: 'make-client-config',
+            name: 'make-angular-config',
             description: 'Create new config for the specified module in client side'
         }, {
-            name: 'make-client-controller',
+            name: 'make-angular-controller',
             description: 'Create new controller for the specified module in client side'
         }, {
-            name: 'make-client-directive',
+            name: 'make-angular-directive',
             description: 'Create new directive for the specified module in client side'
         }, {
-            name: 'make-client-factory',
+            name: 'make-angular-factory',
             description: 'Create new factory for the specified module in client side'
         }, {
-            name: 'make-client-module',
+            name: 'make-angular-module',
             description: 'Create a new angular module for the specified module in client side'
         }, {
-            name: 'make-client-provider',
+            name: 'make-angular-provider',
             description: 'Craete new provider for the specified module in client side'
         }, {
-            name: 'make-client-service',
+            name: 'make-angular-service',
             description: 'Create new service for the specified module in client side'
         }, {
             name: 'make-controller',
