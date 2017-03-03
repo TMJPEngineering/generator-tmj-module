@@ -17,7 +17,7 @@ module.exports = function (method) {
     function index() {
         return function (req, res, next) {
             if (req.route.methods.get) {
-                res.sendFile(path.join(__dirname, '../../../resouces/views/<%= module %>', 'index.html'));
+                res.sendFile(path.join(__dirname, '../../../resources/views/<%= module %>', 'index.html'));
             }
         }
     }
