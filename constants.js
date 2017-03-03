@@ -6,7 +6,10 @@
  */
 var constants = {
     module: {
-        path: 'modules'
+        path: 'modules/'
+    },
+    view: {
+        path: 'resources/views/'
     }
 };
 
