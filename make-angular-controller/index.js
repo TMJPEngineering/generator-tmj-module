@@ -7,7 +7,7 @@ var generator = require('yeoman-generator'),
 
 module.exports = generator.extend({
     initializing: function () {
-        error(this, ['config', 'module'], 'config');
+        error(this, ['controller', 'module'], 'controller');
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
     },
@@ -19,8 +19,8 @@ module.exports = generator.extend({
         };
 
         this.fs.copyTpl(
-            this.templatePath('config.js'),
-            this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '.config.js'),
+            this.templatePath('controller.js'),
+            this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '.controller.js'),
             data
         );
     }
