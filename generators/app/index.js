@@ -37,7 +37,7 @@ module.exports = generator.extend({
             description: 'Create new factory for the specified module in client side'
         }, {
             name: 'make-client-module',
-            description: 'Create new module for the specified module in client side'
+            description: 'Create a new angular module for the specified module in client side'
         }, {
             name: 'make-client-provider',
             description: 'Craete new provider for the specified module in client side'
