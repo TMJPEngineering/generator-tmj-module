@@ -3,5 +3,5 @@
 var route = require('./../../../vendor/router');
 
 module.exports = function (app) {
-    route.get('/', '');
+    route.get('/', '<%= module %>.controller@index');
 };
