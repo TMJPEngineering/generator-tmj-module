@@ -10,7 +10,7 @@ module.exports = generator.extend({
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
     },
-    execute: function () {
+    executing: function () {
         var data = {
             name: this.args.shift(),
             module: this.args.shift(),
