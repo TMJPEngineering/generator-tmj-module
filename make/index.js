@@ -4,7 +4,7 @@ var generator = require('yeoman-generator');
 
 module.exports = generator.extend({
     initializing: function () {
-        this.argument('name', { type: String, require: true });
+        this.argument('name', { type: String, required: true });
 
         var name = this.arguments.shift();
 
@@ -16,5 +16,6 @@ module.exports = generator.extend({
         this.composeWith('tmj-module:make-middleware', data);
         this.composeWith('tmj-module:make-route', data);
         this.composeWith('tmj-module:make-test', data);
+        this.composeWith('tmj-module:make-view', data);
     }
 });
