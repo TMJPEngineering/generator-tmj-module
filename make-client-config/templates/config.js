@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module %>')
-        .config(<%= name %>Config);
+        .config(<%= name.ucwords() %>Config);
 
-    <%= name %>Config.$inject = [];
+    <%= name.ucwords() %>Config.$inject = [];
 
     /* @ngInject */
-    function <%= name %>Config() {
+    function <%= name.ucwords() %>Config() {
         
     }
 })();
