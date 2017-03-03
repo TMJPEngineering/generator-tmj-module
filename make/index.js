@@ -16,6 +16,8 @@ module.exports = generator.extend({
         this.composeWith('tmj-module:make-middleware', data);
         this.composeWith('tmj-module:make-route', data);
         this.composeWith('tmj-module:make-test', data);
-        this.composeWith('tmj-module:make-view', data);
+        this.composeWith('tmj-module:make-view', {
+            arguments: ['index', name]
+        });
     }
 });
