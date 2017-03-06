@@ -65,6 +65,10 @@ npm install -g generator-tmj-module
 
 ![Commands](https://cloud.githubusercontent.com/assets/21231662/23598930/a74cced4-0278-11e7-95f0-79d9c35e39ed.png)
 
+**Note:**
+- `[name]` - Required.
+- `[module]` - Required.
+
 ### Creating a Module
 
 To create a new module, you can simply run:
@@ -72,8 +76,6 @@ To create a new module, you can simply run:
 ```
 yo tmj-module:make [name]
 ```
-
-- `[name]` - Required. The name of module will be created.
 
 ### Creating an Angular Config
 
