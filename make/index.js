@@ -6,8 +6,13 @@ var generator = require('yeoman-generator'),
 
 module.exports = generator.extend({
     initializing: function () {
-        if (this.args.length === 0) {
-            this.log(chalk.yellow('\nUsage:\n') + '  yo tmj-module:make [module]\n\n' + chalk.yellow('Error:\n') + chalk.red('  - name of module is required'));
+        if (this.args.length != 1) {
+            this.log(chalk.yellow('\nUsage:\n') + '  yo tmj-module:make [module]\n\n' + chalk.yellow('Error:'));
+            if (this.args.length > 1) {
+                this.log(chalk.red('  Too much arguments'));
+            } else {
+                this.log(chalk.red('  - name of module is required'));
+            }
             process.exit(1);
         }
 
