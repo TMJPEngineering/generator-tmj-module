@@ -6,7 +6,7 @@ var generator = require('yeoman-generator'),
 
 module.exports = generator.extend({
     initializing: function () {
-        error(this, ['test', 'module'], 'test');
+        error(this, 'test');
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
     },
