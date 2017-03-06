@@ -8,7 +8,7 @@
 
     angular
         .module('<%= module %>')
-        .provider('<%= name.ucwords() %>'Provider, <%= name.ucwords() %>Provider);
+        .provider('<%= name.ucwords() %>Provider', <%= name.ucwords() %>Provider);
 
     <%= name.ucwords() %>Provider.$inject = [];
 

@@ -25,43 +25,43 @@ module.exports = generator.extend({
             description: 'Generate new module in server and client side'
         }, {
             name: 'make-angular-config',
-            description: 'Create new config for the specified module in client side'
+            description: 'Create new angular config for the specified module'
         }, {
             name: 'make-angular-controller',
-            description: 'Create new controller for the specified module in client side'
+            description: 'Create new angular controller for the specified module'
         }, {
             name: 'make-angular-directive',
-            description: 'Create new directive for the specified module in client side'
+            description: 'Create new angular directive for the specified module'
         }, {
             name: 'make-angular-factory',
-            description: 'Create new factory for the specified module in client side'
+            description: 'Create new angular factory for the specified module'
         }, {
             name: 'make-angular-module',
-            description: 'Create a new angular module for the specified module in client side'
+            description: 'Create new angular module for the specified module'
         }, {
             name: 'make-angular-provider',
-            description: 'Craete new provider for the specified module in client side'
+            description: 'Craete new angular provider for the specified module'
         }, {
             name: 'make-angular-service',
-            description: 'Create new service for the specified module in client side'
+            description: 'Create new angular service for the specified module'
         }, {
             name: 'make-controller',
-            description: 'Create new controller for the specified module in server side'
+            description: 'Create new controller for the specified module'
         }, {
             name: 'make-middleware',
-            description: 'Create new middleware for the specified module in server side'
+            description: 'Create new middleware for the specified module'
         }, {
             name: 'make-model',
-            description: 'Create new model for the specified module in server side'
+            description: 'Create new model for the specified module'
         }, {
-            name: 'make-route',
-            description: 'Create new route for the specified module in server side'
+            name: 'make-routes',
+            description: 'Create new routes for the specified module'
         }, {
             name: 'make-schema',
-            description: 'Create new schema for the specified module in server side'
+            description: 'Create new schema for the specified module'
         }, {
             name: 'make-test',
-            description: 'Create new test for the specified module in server side'
+            description: 'Create new test for the specified module'
         }, {
             name: 'make-view',
             description: 'Create new html file for the specified module in views folder'
