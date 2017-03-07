@@ -1,6 +1,6 @@
 {
   "name": "generator-tmj-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TMJ Mean Stack Modules Generator",
   "main": "generators/app/index.js",
   "scripts": {
