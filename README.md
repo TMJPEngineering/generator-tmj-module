@@ -77,6 +77,12 @@ To create a new module, you can simply run:
 yo tmj-module:make [name]
 ```
 
+To create multiples modules, you can simply run by example:
+
+```
+yo tmj-module:make blog chat post
+```
+
 ### Creating an Angular Config
 
 Create new angular config for the specified module.
