@@ -26,7 +26,6 @@ module.exports = generator.extend({
 
         this.composeWith('tmj-module:make-angular-config', data);
         this.composeWith('tmj-module:make-angular-controller', data);
-        this.composeWith('tmj-module:make-angular-directive', data);
         this.composeWith('tmj-module:make-angular-factory', data);
         this.composeWith('tmj-module:make-angular-module', data);
         this.composeWith('tmj-module:make-angular-provider', data);
