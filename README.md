@@ -25,7 +25,6 @@ Mean Stack Module Generator using Yeoman
   - [Test](https://github.com/TMJPEngineering/generator-tmj-module#create-a-test)
   - [View](https://github.com/TMJPEngineering/generator-tmj-module#create-a-view)
 - [Folder Structure](https://github.com/TMJPEngineering/generator-tmj-module#folder-structure)
-- [To Do](https://github.com/TMJPEngineering/generator-tmj-module#to-do)
 - [Credits](https://github.com/TMJPEngineering/generator-tmj-module#credits)
 - [LICENSE](https://github.com/TMJPEngineering/generator-tmj-module#license)
 
