@@ -1,14 +1,26 @@
 'use strict';
 
 var generator = require('yeoman-generator'),
+    chalk = require('chalk'),
     error = require('./../error'),
-    constants = require('./../constants');
+    constants = require('./../constants'),
+    option;
 
 module.exports = generator.extend({
     initializing: function () {
         error(this, 'controller');
+        var options = ['rest', 'plain'];
+        option = 'controller';
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
+        if (this.options.option !== undefined) {
+            if (options.includes(this.options.option)) {
+                option = this.options.option;
+            } else {
+                console.log(chalk.red('Error:\n  - ') + 'Invalid option');
+                process.exit(1);
+            }
+        }
     },
     executing: function () {
         var data = {
@@ -18,7 +30,7 @@ module.exports = generator.extend({
         };
 
         this.fs.copyTpl(
-            this.templatePath('server/controller.js'),
+            this.templatePath('server/' + option + '.js'),
             this.destinationPath(constants.module.path + data.module + '/server/' + data.name + '.controller.js'),
             data
         );
