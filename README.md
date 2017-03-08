@@ -205,21 +205,26 @@ yo tmj-module:make-view [name] [module]
 
 Example:
 
-*User Module* 
+*User Module*
+
+```
+yo tmj-module:make user
+```
 
 ```
 ...
 └── modules/
 │   └── user/
 │       ├── client/
-│       │   └── module/
-│       │   │   └── user.module.js
+│       │   ├── user-manager.factory.js
+│       │   ├── user-resource.factory.js
 │       │   ├── user.config.js
 │       │   ├── user.controller.js
-│       │   ├── user.directive.js
-│       │   ├── user.factory.js
 │       │   ├── user.provider.js
 │       │   └── user.service.js
+│       │   └── user.test.js
+│       │   └── module/
+│       │       └── user.module.js
 │       └── server/
 │           ├── user.controller.js
 │           ├── user.middleware.js
@@ -233,12 +238,6 @@ Example:
             └── index.html
 ...
 ```
-
-## To Do
-
-- [ ] Create multiple modules
-- [ ] Create RESTful Controller
-- [ ] Create Plain Controller
 
 ## Credits
 
