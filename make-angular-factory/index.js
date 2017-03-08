@@ -1,15 +1,26 @@
 'use strict';
 
 var generator = require('yeoman-generator'),
+    chalk = require('chalk'),
     error = require('./../error'),
     constants = require('./../constants'),
-    custom = require('./../custom-prototypes');
+    custom = require('./../custom-prototypes'),
+    hasOption = false;
 
 module.exports = generator.extend({
     initializing: function () {
-        error(this, 'factory');
+        error(this, 'factory', true);
+        var options = ['plain'];
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
+        if (this.options.option !== undefined) {
+            if (options.includes(this.options.option)) {
+                hasOption = true;
+            } else {
+                console.log(chalk.red('Error:\n  - ') + 'Invalid option');
+                process.exit(1);
+            }
+        }
     },
     executing: function () {
         var data = {
@@ -18,16 +29,24 @@ module.exports = generator.extend({
             year: new Date().getFullYear()
         };
 
-        this.fs.copyTpl(
-            this.templatePath('manager.js'),
-            this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-manager.factory.js'),
-            data
-        );
+        if (hasOption) {
+            this.fs.copyTpl(
+                this.templatePath('plain.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '.factory.js'),
+                data
+            );
+        } else {
+            this.fs.copyTpl(
+                this.templatePath('manager.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-manager.factory.js'),
+                data
+            );
 
-        this.fs.copyTpl(
-            this.templatePath('resource.js'),
-            this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-resource.factory.js'),
-            data
-        );
+            this.fs.copyTpl(
+                this.templatePath('resource.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-resource.factory.js'),
+                data
+            );
+        }
     }
 });
