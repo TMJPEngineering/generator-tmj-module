@@ -112,8 +112,10 @@ yo tmj-module:make-angular-directive [name] [module]
 Create new angular factory for the specified module.
 
 ```
-yo tmj-module:make-angular-factory [name] [module]
+yo tmj-module:make-angular-factory [name] [module] [--option]
 ```
+
+**Note:** Option -> `plain`
 
 ### Creating an Angular Module
 
@@ -144,8 +146,10 @@ yo tmj-module:make-angular-service [name] [module]
 Create new controller for the specified module.
 
 ```
-yo tmj-module:make-controller [name] [module]
+yo tmj-module:make-controller [name] [module] [--option]
 ```
+
+**Note:** Option -> `rest`, `plain`
 
 ### Creating a Middleware
 
@@ -168,8 +172,10 @@ yo tmj-module:make-model [name] [module]
 Create new routes for the specified module.
 
 ```
-yo tmj-module:make-routes [name] [module]
+yo tmj-module:make-routes [name] [module] [--option]
 ```
+
+**Note:** Option -> `plain`
 
 ### Creating a Schema
 
