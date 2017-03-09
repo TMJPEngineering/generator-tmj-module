@@ -154,20 +154,20 @@ yo tmj-module:make-controller [name] [module] [--option=value]
 - `rest`
 - `plain`
 
+### Creating a Entity
+
+Create new entity for the specified module.
+
+```
+yo tmj-module:make-entity [name] [module]
+```
+
 ### Creating a Middleware
 
 Create new middleware for the specified module.
 
 ```
 yo tmj-module:make-middleware [name] [module]
-```
-
-### Creating a Model
-
-Create new model for the specified module.
-
-```
-yo tmj-module:make-model [name] [module]
 ```
 
 ### Creating a Routes
