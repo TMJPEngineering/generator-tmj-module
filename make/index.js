@@ -2,7 +2,8 @@
 
 var generator = require('yeoman-generator'),
     error = require('./../error'),
-    chalk = require('chalk');
+    chalk = require('chalk'),
+    custom = require('./../custom-prototypes');
 
 module.exports = generator.extend({
     initializing: function () {
@@ -17,8 +18,9 @@ module.exports = generator.extend({
         if (this.arguments.length > 0) {
             var $this = this;
             this.arguments.forEach(function (module) {
+                module = module.ucfirst();
                 var data = {
-                    arguments: [module, module]
+                    arguments: [module, module.toLowerCase()]
                 };
 
                 $this.composeWith('tmj-module:make-angular-config', data);
@@ -34,7 +36,7 @@ module.exports = generator.extend({
                 $this.composeWith('tmj-module:make-schema', data);
                 $this.composeWith('tmj-module:make-test', data);
                 $this.composeWith('tmj-module:make-view', {
-                    arguments: ['index', module]
+                    arguments: ['index', module.toLowerCase()]
                 });
             });
         }

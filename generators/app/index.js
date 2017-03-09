@@ -68,7 +68,7 @@ module.exports = generator.extend({
         }];
 
         this.log(chalk.yellow('Usage:'));
-        this.log('  yo tmj-module:[command] [name] [module]\n');
+        this.log('  yo tmj-module:[command] [name] [module] [--option=value]\n');
         this.log(chalk.yellow('Options:'));
 
         var spaces = 28,

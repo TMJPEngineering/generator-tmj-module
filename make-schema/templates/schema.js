@@ -7,6 +7,6 @@
 
 var Mongoose = require('mongoose'),
     Schema = Mongoose.Schema,
-    <%= module %>Schema = new Mongoose.Schema({});
+    <%= module.lcfirst() %>Schema = new Mongoose.Schema({});
 
-module.exports = Mongoose.model('<%= module.ucwords() %>s', <%= module %>Schema);
+module.exports = Mongoose.model('<%= module.ucwords() %>s', <%= module.lcfirst() %>Schema);

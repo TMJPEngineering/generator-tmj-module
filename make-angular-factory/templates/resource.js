@@ -23,6 +23,6 @@
             }
         };
 
-        return $resource('<%= name %>/:id', {id: '@id'}, otherMethods);
+        return $resource('<%= name.toLowerCase() %>/:id', {id: '@id'}, otherMethods);
     }
 })();
