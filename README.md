@@ -62,7 +62,7 @@ npm install -g generator-tmj-module
 
 ## List of Commands
 
-![Commands](https://cloud.githubusercontent.com/assets/21231662/23731990/9015562a-04ab-11e7-8a93-0e8959d3eced.png)
+![Commands](https://cloud.githubusercontent.com/assets/21231662/23740124/230dfe88-04dd-11e7-9e22-6045228313ef.png)
 
 **Note:**
 - `[name]` - Required
