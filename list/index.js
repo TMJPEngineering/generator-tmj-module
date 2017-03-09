@@ -16,8 +16,8 @@ module.exports = generator.extend({
                 path: 'Path'
             },
             count = {
-                name: 4,
-                path: 4
+                name: header.name.length,
+                path: header.path.length
             };
 
         this.log(normalizedPath);
