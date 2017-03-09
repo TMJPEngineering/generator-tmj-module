@@ -20,7 +20,7 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('model.js'),
-            this.destinationPath(constants.module.path + data.module + '/server/' + data.name + '.model.js'),
+            this.destinationPath(constants.module.path + data.module + '/server/' + data.name.toLowerCase() + '.model.js'),
             data
         );
     }

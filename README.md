@@ -65,8 +65,9 @@ npm install -g generator-tmj-module
 ![Commands](https://cloud.githubusercontent.com/assets/21231662/23598930/a74cced4-0278-11e7-95f0-79d9c35e39ed.png)
 
 **Note:**
-- `[name]` - Required.
-- `[module]` - Required.
+- `[name]` - Required
+- `[module]` - Required
+- `[--option]` - Optional
 
 ### Creating a Module
 
@@ -111,10 +112,11 @@ yo tmj-module:make-angular-directive [name] [module]
 Create new angular factory for the specified module.
 
 ```
-yo tmj-module:make-angular-factory [name] [module] [--option]
+yo tmj-module:make-angular-factory [name] [module] [--option=value]
 ```
 
-**Note:** Option -> `plain`
+**Options:**
+- `plain`
 
 ### Creating an Angular Module
 
@@ -145,10 +147,12 @@ yo tmj-module:make-angular-service [name] [module]
 Create new controller for the specified module.
 
 ```
-yo tmj-module:make-controller [name] [module] [--option]
+yo tmj-module:make-controller [name] [module] [--option=value]
 ```
 
-**Note:** Option -> `rest`, `plain`
+**Options:**
+- `rest`
+- `plain`
 
 ### Creating a Middleware
 
@@ -171,10 +175,11 @@ yo tmj-module:make-model [name] [module]
 Create new routes for the specified module.
 
 ```
-yo tmj-module:make-routes [name] [module] [--option]
+yo tmj-module:make-routes [name] [module] [--option=value]
 ```
 
-**Note:** Option -> `plain`
+**Options**
+- `plain`
 
 ### Creating a Schema
 
