@@ -20,7 +20,7 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('directive.js'),
-            this.destinationPath(constants.module.path + data.module + '/client/' + data.name.toLowerCase() + '.directive.js'),
+            this.destinationPath(constants.module.path + data.module + '/Client/Directives/' + data.name.toLowerCase() + '.directive.js'),
             data
         );
     }

@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('<%= module %>')
+        .module('<%= module.toLowerCase() %>')
         .config(<%= name.ucwords() %>Config);
 
     <%= name.ucwords() %>Config.$inject = [];

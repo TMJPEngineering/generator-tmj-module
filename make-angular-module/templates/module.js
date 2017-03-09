@@ -6,5 +6,5 @@
 (function(app) {
     'use strict';
 
-    app.registerModule('<%= module %>', []);
+    app.registerModule('<%= module.toLowerCase() %>', []);
 })(angularAppConfig);

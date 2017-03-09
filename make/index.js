@@ -20,7 +20,7 @@ module.exports = generator.extend({
             this.arguments.forEach(function (module) {
                 module = module.ucfirst();
                 var data = {
-                    arguments: [module, module.toLowerCase()]
+                    arguments: [module, module]
                 };
 
                 $this.composeWith('tmj-module:make-angular-config', data);
@@ -30,13 +30,13 @@ module.exports = generator.extend({
                 $this.composeWith('tmj-module:make-angular-provider', data);
                 $this.composeWith('tmj-module:make-angular-service', data);
                 $this.composeWith('tmj-module:make-controller', data);
+                $this.composeWith('tmj-module:make-entity', data);
                 $this.composeWith('tmj-module:make-middleware', data);
-                $this.composeWith('tmj-module:make-model', data);
                 $this.composeWith('tmj-module:make-routes', data);
                 $this.composeWith('tmj-module:make-schema', data);
                 $this.composeWith('tmj-module:make-test', data);
                 $this.composeWith('tmj-module:make-view', {
-                    arguments: ['index', module.toLowerCase()]
+                    arguments: ['index', module]
                 });
             });
         }

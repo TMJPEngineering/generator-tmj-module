@@ -5,8 +5,10 @@
  * @copyright <%= year %>
  */
 
-var route = require('./../../../vendor/router');
+var path = require('path'),
+    root = path.dirname(require.main.filename),
+    route = require(root + '/vendor/router');
 
 module.exports = function (app) {
-    route.get('/<%= module %>', '<%= module.ucwords() %>Controller@index', [], '<%= module %>');
+    route.get('/<%= module.toLowerCase() %>', '<%= module.ucwords() %>Controller@index', [], '<%= module %>');
 };
