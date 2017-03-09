@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('<%= module %>')
+        .module('<%= module.toLowerCase() %>')
         .controller('<%= name.ucwords() %>Controller', <%= name.ucwords() %>Controller);
 
     <%= name.ucwords() %>Controller.$inject = ['<%= name.ucwords() %>Manager', '<%= name.ucwords() %>', '<%= name.ucwords() %>Service'];

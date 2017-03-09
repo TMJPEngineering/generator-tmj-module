@@ -62,7 +62,7 @@ npm install -g generator-tmj-module
 
 ## List of Commands
 
-![Commands](https://cloud.githubusercontent.com/assets/21231662/23731990/9015562a-04ab-11e7-8a93-0e8959d3eced.png)
+![Commands](https://cloud.githubusercontent.com/assets/21231662/23740124/230dfe88-04dd-11e7-9e22-6045228313ef.png)
 
 **Note:**
 - `[name]` - Required
@@ -154,20 +154,20 @@ yo tmj-module:make-controller [name] [module] [--option=value]
 - `rest`
 - `plain`
 
+### Creating a Entity
+
+Create new entity for the specified module.
+
+```
+yo tmj-module:make-entity [name] [module]
+```
+
 ### Creating a Middleware
 
 Create new middleware for the specified module.
 
 ```
 yo tmj-module:make-middleware [name] [module]
-```
-
-### Creating a Model
-
-Create new model for the specified module.
-
-```
-yo tmj-module:make-model [name] [module]
 ```
 
 ### Creating a Routes

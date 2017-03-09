@@ -19,7 +19,7 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('middleware.js'),
-            this.destinationPath(constants.module.path + data.module + '/server/' + data.name.toLowerCase() + '.middleware.js'),
+            this.destinationPath(constants.module.path + data.module + '/Server/Middlewares/' + data.name.toLowerCase() + '.middleware.js'),
             data
         );
     }

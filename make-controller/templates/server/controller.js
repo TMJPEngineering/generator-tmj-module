@@ -5,7 +5,8 @@
  * @copyright <%= year %>
  */
 
-var path = require('path');
+var path = require('path'),
+    root = path.dirname(require.main.filename);
 
 module.exports = function (method) {
     var methods = {
@@ -17,7 +18,7 @@ module.exports = function (method) {
     function index() {
         return function (req, res, next) {
             if (req.route.methods.get) {
-                res.sendFile(path.join(__dirname, '../../../resources/views/<%= module %>', 'index.html'));
+                res.sendFile(root + '/resources/views/<%= module.toLowerCase() %>/index.html');
             }
         }
     }

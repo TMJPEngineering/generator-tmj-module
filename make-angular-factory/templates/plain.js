@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('<%= module %>')
+        .module('<%= module.toLowerCase() %>')
         .factory('<%= name.ucwords() %>Factory', <%= name.ucwords() %>Factory);
 
     <%= name.ucwords() %>Factory.$inject = [];
