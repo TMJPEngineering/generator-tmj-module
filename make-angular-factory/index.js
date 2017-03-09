@@ -32,19 +32,19 @@ module.exports = generator.extend({
         if (hasOption) {
             this.fs.copyTpl(
                 this.templatePath('plain.js'),
-                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '.factory.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name.toLowerCase() + '.factory.js'),
                 data
             );
         } else {
             this.fs.copyTpl(
                 this.templatePath('manager.js'),
-                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-manager.factory.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name.toLowerCase() + '-manager.factory.js'),
                 data
             );
 
             this.fs.copyTpl(
                 this.templatePath('resource.js'),
-                this.destinationPath(constants.module.path + data.module + '/client/' + data.name + '-resource.factory.js'),
+                this.destinationPath(constants.module.path + data.module + '/client/' + data.name.toLowerCase() + '-resource.factory.js'),
                 data
             );
         }
