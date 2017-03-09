@@ -7,13 +7,13 @@
     'use strict';
 
     angular
-        .module('<%= module %>')
-        .directive('<%= name %>', <%= name %>);
+        .module('<%= module.toLowerCase() %>')
+        .directive('<%= name.toLowerCase() %>', <%= name.toLowerCase() %>);
 
-    <%= module %>.$inject = [];
+    <%= name.toLowerCase() %>.$inject = [];
 
     /* @ngInject */
-    function directive() {
+    function <%= name.toLowerCase() %>() {
         var directive = {
             bindToController: true,
             controller: <%= name.ucwords() %>Controller,

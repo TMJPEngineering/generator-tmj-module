@@ -53,11 +53,11 @@ module.exports = generator.extend({
             name: 'make-controller',
             description: 'Create new controller for the specified module'
         }, {
+            name: 'make-entity',
+            description: 'Create new entity for the specified module'
+        }, {
             name: 'make-middleware',
             description: 'Create new middleware for the specified module'
-        }, {
-            name: 'make-model',
-            description: 'Create new model for the specified module'
         }, {
             name: 'make-routes',
             description: 'Create new routes for the specified module'

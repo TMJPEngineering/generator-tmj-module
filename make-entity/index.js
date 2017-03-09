@@ -7,7 +7,7 @@ var generator = require('yeoman-generator'),
 
 module.exports = generator.extend({
     initializing: function () {
-        error(this, 'model');
+        error(this, 'entity');
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
     },
@@ -19,8 +19,8 @@ module.exports = generator.extend({
         };
 
         this.fs.copyTpl(
-            this.templatePath('model.js'),
-            this.destinationPath(constants.module.path + data.module + '/server/' + data.name.toLowerCase() + '.model.js'),
+            this.templatePath('entity.js'),
+            this.destinationPath(constants.module.path + data.module + '/Server/Entities/' + data.name.toLowerCase() + '.entity.js'),
             data
         );
     }

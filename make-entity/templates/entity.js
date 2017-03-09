@@ -5,6 +5,6 @@
  * @copyright <%= year %>
  */
 
-var <%= module.ucwords() %> = require('./<%= module %>.schema');
+var <%= module.ucwords() %> = require('./../Schemas/<%= module.lcfirst() %>.schema');
 
 module.exports = {};
