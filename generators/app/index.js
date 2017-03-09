@@ -17,8 +17,13 @@ module.exports = generator.extend({
         }];
 
         var commands = [{
+            group: 'app',
             name: 'app',
             description: 'Lists commands'
+        }, {
+            group: 'list',
+            name: 'list',
+            description: 'Show list of all modules'
         }, {
             group: 'make',
             name: 'make',
