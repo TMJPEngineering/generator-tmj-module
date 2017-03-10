@@ -12,6 +12,7 @@ module.exports = function (method) {
         index: index,
         create: create,
         store: store,
+        show: show,
         edit: edit,
         update: update,
         destroy: destroy
@@ -38,6 +39,14 @@ module.exports = function (method) {
     function store() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
+                
+            }
+        }
+    }
+
+    function show() {
+        return function (req, res, next) {
+            if (req.route.methods.get) {
                 
             }
         }
