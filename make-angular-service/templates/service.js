@@ -8,21 +8,21 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .service('<%= name %>Service', <%= name %>Service);
+        .service('<%= name.ucfirst() %>Service', <%= name.ucfirst() %>Service);
 
-    <%= name %>Service.$inject = ['<%= name %>Manager'];
+    <%= name.ucfirst() %>Service.$inject = ['<%= name.ucfirst() %>Manager'];
 
     /* @ngInject */
-    function <%= name %>Service(<%= name %>Manager) {
-        this.get = get<%= name %>Manager;
-        this.set = set<%= name %>Manager;
+    function <%= name.ucfirst() %>Service(<%= name.ucfirst() %>Manager) {
+        this.get = get<%= name.ucfirst() %>Manager;
+        this.set = set<%= name.ucfirst() %>Manager;
 
-        function get<%= name %>Manager() {
-            return <%= name %>Manager.get();
+        function get<%= name.ucfirst() %>Manager() {
+            return <%= name.ucfirst() %>Manager.get();
         }
 
-        function set<%= name %>Manager(data) {
-            <%= name %>Manager.set(data);
+        function set<%= name.ucfirst() %>Manager(data) {
+            <%= name.ucfirst() %>Manager.set(data);
         }
     }
 })();

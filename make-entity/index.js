@@ -13,14 +13,14 @@ module.exports = generator.extend({
     },
     executing: function () {
         var data = {
-            name: this.args.shift().ucfirst(),
-            module: this.args.shift().ucfirst(),
+            name: this.args.shift(),
+            module: this.args.shift(),
             year: new Date().getFullYear()
         };
 
         this.fs.copyTpl(
             this.templatePath('entity.js'),
-            this.destinationPath(constants.module.path + data.module + '/Server/Entities/' + data.name.toLowerCase() + '.entity.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Entities/' + data.name.toLowerCase() + '.entity.js'),
             data
         );
     }

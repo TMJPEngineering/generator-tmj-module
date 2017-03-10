@@ -13,14 +13,14 @@ module.exports = generator.extend({
     },
     executing: function () {
         var data = {
-            name: this.args.shift().ucfirst(),
-            module: this.args.shift().ucfirst(),
+            name: this.args.shift(),
+            module: this.args.shift(),
             year: new Date().getFullYear()
         };
 
         this.fs.copyTpl(
             this.templatePath('controller.js'),
-            this.destinationPath(constants.module.path + data.module + '/Client/Controllers/' + data.name.toLowerCase() + '.controller.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Controllers/' + data.name.toLowerCase() + '.controller.js'),
             data
         );
     }
