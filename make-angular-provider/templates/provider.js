@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .provider('<%= name.ucwords() %>Provider', <%= name.ucwords() %>Provider);
+        .provider('<%= name %>Provider', <%= name %>Provider);
 
-    <%= name.ucwords() %>Provider.$inject = [];
+    <%= name %>Provider.$inject = [];
 
     /* @ngInject */
-    function <%= name.ucwords() %>Provider() {
+    function <%= name %>Provider() {
         var <%= module %> = [];
         
         var provider = {
@@ -29,17 +29,17 @@
 
         function factory() {
             var service = {
-                get: get<%= name.ucwords() %>,
-                set: set<%= name.ucwords() %>
+                get: get<%= name %>,
+                set: set<%= name %>
             };
 
             return service;
 
-            function get<%= name.ucwords() %>() {
+            function get<%= name %>() {
                 return <%= module %>;
             }
 
-            function set<%= name.ucwords() %>(data) {
+            function set<%= name %>(data) {
                 <%= module %> = data;
             }
 

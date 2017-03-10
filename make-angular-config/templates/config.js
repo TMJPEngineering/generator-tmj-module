@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .config(<%= name.ucwords() %>Config);
+        .config(<%= name %>Config);
 
-    <%= name.ucwords() %>Config.$inject = [];
+    <%= name %>Config.$inject = [];
 
     /* @ngInject */
-    function <%= name.ucwords() %>Config() {
+    function <%= name %>Config() {
         
     }
 })();
