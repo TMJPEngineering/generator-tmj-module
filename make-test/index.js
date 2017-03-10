@@ -2,7 +2,8 @@
 
 var generator = require('yeoman-generator'),
     error = require('./../error'),
-    constants = require('./../constants');
+    constants = require('./../constants'),
+    custom = require('./../custom-prototypes');
 
 module.exports = generator.extend({
     initializing: function () {
@@ -19,13 +20,13 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('test.js'),
-            this.destinationPath(constants.module.path + data.module + '/Client/Tests/' + data.name.toLowerCase() + '.test.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Tests/' + data.name.toLowerCase() + '.test.js'),
             data
         );
 
         this.fs.copyTpl(
             this.templatePath('test.js'),
-            this.destinationPath(constants.module.path + data.module + '/Server/Tests/' + data.name.toLowerCase() + '.test.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Tests/' + data.name.toLowerCase() + '.test.js'),
             data
         );
     }

@@ -3,13 +3,13 @@
 
 <head>
   <base href="/">
-  <title><%= module.ucwords() %></title>
+  <title><%= module.ucfirst() %></title>
 
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-  Welcome to <%= name %> view in <%= module %> module
+  Welcome to <%= name.lcfirst() %> view in <%= module.ucfirst() %> module
 </body>
 
 </html>

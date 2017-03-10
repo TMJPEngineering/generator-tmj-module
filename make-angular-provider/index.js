@@ -20,7 +20,7 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('provider.js'),
-            this.destinationPath(constants.module.path + data.module + '/Client/Providers/' + data.name.toLowerCase() + '.provider.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Providers/' + data.name.toLowerCase() + '.provider.js'),
             data
         );
     }

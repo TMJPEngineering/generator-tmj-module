@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .controller('<%= name.ucwords() %>Controller', <%= name.ucwords() %>Controller);
+        .controller('<%= name.ucfirst() %>Controller', <%= name.ucfirst() %>Controller);
 
-    <%= name.ucwords() %>Controller.$inject = ['<%= name.ucwords() %>Manager', '<%= name.ucwords() %>', '<%= name.ucwords() %>Service'];
+    <%= name.ucfirst() %>Controller.$inject = ['<%= name.ucfirst() %>Manager', '<%= name.ucfirst() %>', '<%= name.ucfirst() %>Service'];
 
     /* @ngInject */
-    function <%= name.ucwords() %>Controller(<%= name.ucwords() %>Manager, <%= name.ucwords() %>, <%= name.ucwords() %>Service) {
+    function <%= name.ucfirst() %>Controller(<%= name.ucfirst() %>Manager, <%= name.ucfirst() %>, <%= name.ucfirst() %>Service) {
         var vm = this;
         vm.<%= name.toLowerCase() %> = [];
 

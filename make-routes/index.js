@@ -32,13 +32,13 @@ module.exports = generator.extend({
         if (hasOption) {
             this.fs.copyTpl(
                 this.templatePath('plain.js'),
-                this.destinationPath(constants.module.path + data.module + '/Server/Routes/' + data.name.toLowerCase() + '.routes.js'),
+                this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Routes/' + data.name.toLowerCase() + '.routes.js'),
                 data
             );
         } else {
             this.fs.copyTpl(
                 this.templatePath('routes.js'),
-                this.destinationPath(constants.module.path + data.module + '/Server/Routes/' + data.name.toLowerCase() + '.routes.js'),
+                this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Routes/' + data.name.toLowerCase() + '.routes.js'),
                 data
             );
         }

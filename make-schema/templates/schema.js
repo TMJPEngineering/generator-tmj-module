@@ -14,4 +14,4 @@ var Mongoose = require('mongoose'),
 
 <%= module.lcfirst() %>Schema.plugin(plugin);
 
-module.exports = Mongoose.model('<%= module.ucwords() %>s', <%= module.lcfirst() %>Schema);
+module.exports = Mongoose.model('<%= module.ucfirst() %>s', <%= module.lcfirst() %>Schema);

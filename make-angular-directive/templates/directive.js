@@ -16,7 +16,7 @@
     function <%= name.toLowerCase() %>() {
         var directive = {
             bindToController: true,
-            controller: <%= name.ucwords() %>Controller,
+            controller: <%= name.ucfirst() %>Controller,
             controllerAs: 'vm',
             link: link,
             restrict: 'A',
@@ -29,5 +29,5 @@
     }
 
     /* @ngInject */
-    function <%= name.ucwords() %>Controller() {}
+    function <%= name.ucfirst() %>Controller() {}
 })();

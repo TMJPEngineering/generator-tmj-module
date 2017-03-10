@@ -80,7 +80,7 @@ yo tmj-module:make [name]
 To create multiples modules, you can simply run by example:
 
 ```
-yo tmj-module:make blog chat post
+yo tmj-module:make Blog Chat Post
 ```
 
 ### Creating an Angular Config
@@ -212,33 +212,44 @@ Example:
 *User Module*
 
 ```
-yo tmj-module:make user
+yo tmj-module:make Chat
 ```
 
 ```
 ...
 └── modules/
-│   └── user/
-│       ├── client/
-│       │   ├── user-manager.factory.js
-│       │   ├── user-resource.factory.js
-│       │   ├── user.config.js
-│       │   ├── user.controller.js
-│       │   ├── user.provider.js
-│       │   └── user.service.js
-│       │   └── user.test.js
-│       │   └── module/
-│       │       └── user.module.js
-│       └── server/
-│           ├── user.controller.js
-│           ├── user.middleware.js
-│           ├── user.model.js
-│           ├── user.routes.js
-│           ├── user.schema.js
-│           └── user.test.js
+│   └── Chat/
+│       ├── Client/
+│       │   ├── Config
+|       │   │   └── chat.config.js
+│       │   ├── Controllers
+|       │   │   └── chat.controller.js
+│       │   ├── Factories
+|       │   │   └── chat-manager.factory.js
+|       │   │   └── chat-resource.factory.js
+│       │   ├── Providers
+|       │   │   └── chat.provider.js
+│       │   └── Services
+|       │   │   └── chat.service.js
+│       │   └── Tests
+|       │   │   └── chat.test.js
+│       │   └── user.module.js
+│       └── Server/
+│           ├── Controllers
+|           │   └── chat.controller.js
+│           ├── Entities
+|           │   └── chat.entity.js
+│           ├── Middlewares
+|           │   └── chat.middleware.js
+│           ├── Routes
+|           │   └── chat.routes.js
+│           ├── Schemas
+|           │   └── chat.schema.js
+│           └── Tests
+|               └── chat.test.js
 └── resources/
     └── views/
-        └── users/
+        └── chat/
             └── index.html
 ...
 ```

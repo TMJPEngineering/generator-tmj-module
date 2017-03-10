@@ -20,7 +20,7 @@ module.exports = generator.extend({
 
         this.fs.copyTpl(
             this.templatePath('entity.js'),
-            this.destinationPath(constants.module.path + data.module + '/Server/Entities/' + data.name.toLowerCase() + '.entity.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Entities/' + data.name.toLowerCase() + '.entity.js'),
             data
         );
     }

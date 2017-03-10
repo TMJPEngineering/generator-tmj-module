@@ -5,7 +5,7 @@
  * @copyright <%= year %>
  */
 
-describe('<%= name %>', function () {
+describe('<%= name.ucfirst() %>', function () {
     it('should return true', function () {
         expect(true).toBeTruthy();
     });

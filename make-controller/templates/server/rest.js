@@ -5,13 +5,15 @@
  * @copyright <%= year %>
  */
 
-var path = require('path');
+var path = require('path'),
+    root = path.dirname(require.main.filename),
 
 module.exports = function (method) {
     var methods = {
         index: index,
         create: create,
         store: store,
+        show: show,
         edit: edit,
         update: update,
         destroy: destroy
@@ -38,6 +40,14 @@ module.exports = function (method) {
     function store() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
+                
+            }
+        }
+    }
+
+    function show() {
+        return function (req, res, next) {
+            if (req.route.methods.get) {
                 
             }
         }
