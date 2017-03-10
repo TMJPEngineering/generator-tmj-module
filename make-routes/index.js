@@ -24,8 +24,8 @@ module.exports = generator.extend({
     },
     executing: function () {
         var data = {
-            name: this.args.shift(),
-            module: this.args.shift(),
+            name: this.args.shift().ucfirst(),
+            module: this.args.shift().ucfirst(),
             year: new Date().getFullYear()
         };
 

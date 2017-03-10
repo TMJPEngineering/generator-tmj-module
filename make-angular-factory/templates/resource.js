@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .factory('<%= name.ucwords() %>', <%= name.ucwords() %>);
+        .factory('<%= name %>', <%= name %>);
 
-    <%= name.ucwords() %>.$inject = ['$resource'];
+    <%= name %>.$inject = ['$resource'];
 
     /* @ngInject */
-    function <%= name.ucwords() %>($resource) {
+    function <%= name %>($resource) {
         var otherMethods = {
             update: {
                 'method': 'PUT',
