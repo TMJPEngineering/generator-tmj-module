@@ -24,27 +24,27 @@ module.exports = generator.extend({
     },
     executing: function () {
         var data = {
-            name: this.args.shift().ucfirst(),
-            module: this.args.shift().ucfirst(),
+            name: this.args.shift(),
+            module: this.args.shift(),
             year: new Date().getFullYear()
         };
 
         if (hasOption) {
             this.fs.copyTpl(
                 this.templatePath('plain.js'),
-                this.destinationPath(constants.module.path + data.module + '/Client/Factories/' + data.name.toLowerCase() + '.factory.js'),
+                this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Factories/' + data.name.toLowerCase() + '.factory.js'),
                 data
             );
         } else {
             this.fs.copyTpl(
                 this.templatePath('manager.js'),
-                this.destinationPath(constants.module.path + data.module + '/Client/Factories/' + data.name.toLowerCase() + '-manager.factory.js'),
+                this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Factories/' + data.name.toLowerCase() + '-manager.factory.js'),
                 data
             );
 
             this.fs.copyTpl(
                 this.templatePath('resource.js'),
-                this.destinationPath(constants.module.path + data.module + '/Client/Factories/' + data.name.toLowerCase() + '-resource.factory.js'),
+                this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Factories/' + data.name.toLowerCase() + '-resource.factory.js'),
                 data
             );
         }

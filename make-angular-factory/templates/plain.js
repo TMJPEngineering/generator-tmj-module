@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .factory('<%= name %>Factory', <%= name %>Factory);
+        .factory('<%= name.ucfirst() %>Factory', <%= name.ucfirst() %>Factory);
 
-    <%= name %>Factory.$inject = [];
+    <%= name.ucfirst() %>Factory.$inject = [];
 
     /* @ngInject */
-    function <%= name %>Factory() {
+    function <%= name.ucfirst() %>Factory() {
         var factory = {};
 
         return factory;

@@ -12,20 +12,20 @@ module.exports = generator.extend({
     },
     executing: function () {
         var data = {
-            name: this.args.shift().ucfirst(),
-            module: this.args.shift().ucfirst(),
+            name: this.args.shift(),
+            module: this.args.shift(),
             year: new Date().getFullYear()
         };
 
         this.fs.copyTpl(
             this.templatePath('test.js'),
-            this.destinationPath(constants.module.path + data.module + '/Client/Tests/' + data.name.toLowerCase() + '.test.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Client/Tests/' + data.name.toLowerCase() + '.test.js'),
             data
         );
 
         this.fs.copyTpl(
             this.templatePath('test.js'),
-            this.destinationPath(constants.module.path + data.module + '/Server/Tests/' + data.name.toLowerCase() + '.test.js'),
+            this.destinationPath(constants.module.path + data.module.ucfirst() + '/Server/Tests/' + data.name.toLowerCase() + '.test.js'),
             data
         );
     }

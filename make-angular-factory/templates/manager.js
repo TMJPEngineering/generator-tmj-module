@@ -8,26 +8,26 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .factory('<%= name %>Manager', <%= name %>Manager);
+        .factory('<%= name.ucfirst() %>Manager', <%= name.ucfirst() %>Manager);
 
-    <%= name %>Manager.$inject = [];
+    <%= name.ucfirst() %>Manager.$inject = [];
 
     /* @ngInject */
-    function <%= name %>Manager() {
-        var <%= module %>;
+    function <%= name.ucfirst() %>Manager() {
+        var <%= module.ucfirst() %>;
         var service = {
-            get: get<%= name %>,
-            set: set<%= name %>
+            get: get<%= name.ucfirst() %>,
+            set: set<%= name.ucfirst() %>
         };
 
         return service;
 
-        function get<%= name %>() {
-            return <%= module %>;
+        function get<%= name.ucfirst() %>() {
+            return <%= module.ucfirst() %>;
         }
 
-        function set<%= name %>(data) {
-            <%= module %> = data;
+        function set<%= name.ucfirst() %>(data) {
+            <%= module.ucfirst() %> = data;
         }
     }
 })();
