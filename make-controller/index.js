@@ -4,6 +4,7 @@ var generator = require('yeoman-generator'),
     chalk = require('chalk'),
     error = require('./../error'),
     constants = require('./../constants'),
+    custom = require('./../custom-prototypes'),
     option;
 
 module.exports = generator.extend({
