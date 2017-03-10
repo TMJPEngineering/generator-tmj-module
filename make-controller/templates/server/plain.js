@@ -5,7 +5,8 @@
  * @copyright <%= year %>
  */
 
-var path = require('path');
+var path = require('path'),
+    root = path.dirname(require.main.filename),
 
 module.exports = function (method) {
     var methods = {};
