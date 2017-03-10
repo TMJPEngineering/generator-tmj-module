@@ -2,7 +2,8 @@
 
 var generator = require('yeoman-generator'),
     error = require('./../error'),
-    constants = require('./../constants');
+    constants = require('./../constants'),
+    custom = require('./../custom-prototypes');
 
 module.exports = generator.extend({
     initializing: function () {
