@@ -14,6 +14,9 @@ module.exports = generator.extend({
         var options = [{
             name: '-h, --help',
             description: 'Display this help message'
+        }, {
+            name: '--force',
+            description: 'Force overwrite files'
         }];
 
         var commands = [{
