@@ -17,6 +17,7 @@ Mean Stack Module Generator using Yeoman
   - [Angular Module](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-module)
   - [Angular Provider](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-provider)
   - [Angular Service](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-service)
+  - [Auth](https://github.com/TMJPEngineering/generator-tmj-module#create-an-auth-module)
   - [Controller](https://github.com/TMJPEngineering/generator-tmj-module#create-a-controller)
   - [Middleware](https://github.com/TMJPEngineering/generator-tmj-module#create-a-middleware)
   - [Model](https://github.com/TMJPEngineering/generator-tmj-module#create-a-model)
@@ -140,6 +141,14 @@ Create new angular service for the specified module.
 
 ```
 yo tmj-module:make-angular-service [name] [module]
+```
+
+### Creating an Auth Module
+
+Scaffold basic login and registration views.
+
+```
+yo tmj-module:make-auth --force
 ```
 
 ### Creating a Controller
