@@ -82,6 +82,5 @@ module.exports = generator.extend({
         });
 
         this.log(border);
-
     }
 });
