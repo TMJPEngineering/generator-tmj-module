@@ -20,8 +20,6 @@ module.exports = generator.extend({
                 path: header.path.length
             };
 
-        this.log(normalizedPath);
-
         fs.readdirSync(normalizedPath).forEach(function (dir) {
             var module = dir,
                 strPath = normalizedPath.replace(/\\/g, '/') + dir;
