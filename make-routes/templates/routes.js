@@ -10,5 +10,7 @@ var path = require('path'),
     route = require(root + '/vendor/router');
 
 module.exports = function (app) {
-    route.get('/<%= module.toLowerCase() %>', '<%= module.ucfirst() %>Controller@index', [], '<%= module.ucfirst() %>');
+    route.setModule('<%= module.ucfirst() %>');
+
+    route.get('/<%= module.toLowerCase() %>', '<%= module.ucfirst() %>Controller@index');
 };
