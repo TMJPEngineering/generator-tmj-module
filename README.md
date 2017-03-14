@@ -226,7 +226,7 @@ yo tmj-module:make Chat
 
 ```
 ...
-└── modules/
+├── modules/
 │   └── Chat/
 │       ├── Client/
 │       │   ├── Config
@@ -234,7 +234,7 @@ yo tmj-module:make Chat
 │       │   ├── Controllers
 |       │   │   └── chat.controller.js
 │       │   ├── Factories
-|       │   │   └── chat-manager.factory.js
+|       │   │   ├── chat-manager.factory.js
 |       │   │   └── chat-resource.factory.js
 │       │   ├── Providers
 |       │   │   └── chat.provider.js
