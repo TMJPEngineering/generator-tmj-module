@@ -24,7 +24,7 @@ module.exports = function (method) {
     function login() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
-                passport.authenticate('tmj', function (err, user, info) {
+                passport.authenticate('local', function (err, user, info) {
                     var throwErr = err || info;
 
                     if (throwErr) {

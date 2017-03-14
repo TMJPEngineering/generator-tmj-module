@@ -10,6 +10,7 @@
         vm.state = $state;
         vm.username = '';
         vm.password = '';
+        vm.name = '';
 
         vm.login = login;
         vm.register = register;
@@ -19,7 +20,7 @@
         }
 
         function register() {
-            AuthFactory.register({ username: vm.username, password: vm.password });
+            AuthFactory.register({ name: vm.name, username: vm.username, password: vm.password });
         }
     }
 })();
