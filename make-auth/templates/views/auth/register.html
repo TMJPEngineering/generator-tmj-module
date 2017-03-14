@@ -4,22 +4,28 @@
       <div class="panel panel-default">
         <div class="panel-heading">Register</div>
         <div class="panel-body">
-          <form class="form-horizontal" ng-submit="ac.register()">
+          <form class="form-horizontal" ng-submit="ac.register()" name="register">
+            <div class="form-group">
+              <label for="name" class="col-md-4 control-label">Name</label>
+              <div class="col-md-6">
+                <input id="name" type="name" class="form-control" ng-model="ac.name" placeholder="Name" ng-required="true">
+              </div>
+            </div>
             <div class="form-group">
               <label for="username" class="col-md-4 control-label">Username</label>
               <div class="col-md-6">
-                <input id="username" type="username" class="form-control" ng-model="username" placeholder="Username">
+                <input id="username" type="username" class="form-control" ng-model="ac.username" placeholder="Username" ng-required="true" ng-minlength="5">
               </div>
             </div>
             <div class="form-group">
               <label for="password" class="col-md-4 control-label">Password</label>
               <div class="col-md-6">
-                <input id="password" type="password" class="form-control" ng-model="password" placeholder="Password">
+                <input id="password" type="password" class="form-control" ng-model="ac.password" placeholder="Password" ng-required="true" ng-minlength="6">
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" ng-disabled="register.$invalid">
                   <i class="fa fa-btn fa-user"></i> Register
                 </button>
               </div>
