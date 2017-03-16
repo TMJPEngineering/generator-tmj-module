@@ -11,6 +11,11 @@ module.exports = generator.extend({
         );
 
         this.fs.copy(
+            this.templatePath('PasswordReset'),
+            this.destinationPath(constants.module.path + 'PasswordReset')
+        );
+
+        this.fs.copy(
             this.templatePath('Welcome'),
             this.destinationPath(constants.module.path + 'Welcome')
         );

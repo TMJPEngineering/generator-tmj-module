@@ -7,8 +7,20 @@
 
     function AuthFactory($http) {
         return {
+            forgot: forgot,
             login: login,
-            register: register
+            register: register,
+            reset: reset
+        }
+
+        function forgot(data) {
+            $http.post('/password/reset', data).then(function (res) {
+                if (res.data) {
+                    alert('We have e-mailed your password reset link!');
+                } else {
+                    alert('We can\'t find a user with that e-mail address.')
+                }
+            });
         }
 
         function login(credentials) {
@@ -22,11 +34,21 @@
         }
 
         function register(data) {
-            $http.post('/register', data).then(function(res) {
+            $http.post('/register', data).then(function (res) {
                 if (res.data) {
                     window.location.assign('/home');
                 } else {
                     alert('Username already exist');
+                }
+            });
+        }
+
+        function reset(data) {
+            $http.put('/password/reset/' + data.token, data).then(function (res) {
+                if (res.data) {
+                    window.location.assign('/login');
+                } else {
+                    alert('Error occured');
                 }
             });
         }
