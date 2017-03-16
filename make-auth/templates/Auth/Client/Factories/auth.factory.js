@@ -48,7 +48,7 @@
                 if (res.data) {
                     window.location.assign('/login');
                 } else {
-                    alert('Error occured');
+                    alert('We can\'t find a user with that e-mail address.');
                 }
             });
         }
