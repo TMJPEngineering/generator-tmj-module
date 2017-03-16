@@ -4,12 +4,12 @@
       <div class="panel panel-default">
         <div class="panel-heading">Login</div>
         <div class="panel-body">
-          <form class="form-horizontal" role="form" ng-submit="ac.login()">
+          <form class="form-horizontal" role="form" ng-submit="ac.login()" name="login">
             <div class="form-group">
-              <label for="username" class="col-md-4 control-label">Username</label>
+              <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
               <div class="col-md-6">
-                <input id="username" type="text" class="form-control" placeholder="Username" ng-model="ac.username">
+                <input id="email" type="email" class="form-control" ng-model="ac.email" ng-required="true">
               </div>
             </div>
 
@@ -17,7 +17,7 @@
               <label for="password" class="col-md-4 control-label">Password</label>
 
               <div class="col-md-6">
-                <input id="password" type="password" class="form-control" placeholder="Password" ng-model="ac.password">
+                <input id="password" type="password" class="form-control" ng-model="ac.password" ng-required="true">
               </div>
             </div>
 
@@ -33,11 +33,13 @@
 
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" ng-disabled="login.$invalid">
                   <i class="fa fa-btn fa-sign-in"></i> Login
                 </button>
 
-                <p class="create-account">Not registered? <a class="btn-link" ui-sref="register">Create Account</a></p>
+                <p class="create-account">
+                  <a class="btn-link" ui-sref="forgot">Forgot Your Password?</a>
+                </p>
               </div>
             </div>
           </form>

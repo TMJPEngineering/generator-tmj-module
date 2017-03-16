@@ -10,21 +10,21 @@ Mean Stack Module Generator using Yeoman
   - [Globally](https://github.com/TMJPEngineering/generator-tmj-module#globally)
 - [List of Commands](https://github.com/TMJPEngineering/generator-tmj-module#list-of-commands)
   - [Module](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-module)
-  - [Angular Config](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-config)
-  - [Angular Controller](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-controller)
-  - [Angular Directive](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-directive)
-  - [Angular Factory](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-factory)
-  - [Angular Module](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-module)
-  - [Angular Provider](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-provider)
-  - [Angular Service](https://github.com/TMJPEngineering/generator-tmj-module#create-an-angular-service)
-  - [Auth](https://github.com/TMJPEngineering/generator-tmj-module#create-an-auth-module)
-  - [Controller](https://github.com/TMJPEngineering/generator-tmj-module#create-a-controller)
-  - [Middleware](https://github.com/TMJPEngineering/generator-tmj-module#create-a-middleware)
-  - [Model](https://github.com/TMJPEngineering/generator-tmj-module#create-a-model)
-  - [Routes](https://github.com/TMJPEngineering/generator-tmj-module#create-a-routes)
-  - [Schema](https://github.com/TMJPEngineering/generator-tmj-module#create-a-schema)
-  - [Test](https://github.com/TMJPEngineering/generator-tmj-module#create-a-test)
-  - [View](https://github.com/TMJPEngineering/generator-tmj-module#create-a-view)
+  - [Angular Config](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-config)
+  - [Angular Controller](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-controller)
+  - [Angular Directive](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-directive)
+  - [Angular Factory](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-factory)
+  - [Angular Module](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-module)
+  - [Angular Provider](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-provider)
+  - [Angular Service](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-service)
+  - [Auth](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-auth-module)
+  - [Controller](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-controller)
+  - [Middleware](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-middleware)
+  - [Model](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-model)
+  - [Routes](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-routes)
+  - [Schema](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-schema)
+  - [Test](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-test)
+  - [View](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-view)
 - [Folder Structure](https://github.com/TMJPEngineering/generator-tmj-module#folder-structure)
 - [Credits](https://github.com/TMJPEngineering/generator-tmj-module#credits)
 - [LICENSE](https://github.com/TMJPEngineering/generator-tmj-module#license)
@@ -218,7 +218,7 @@ yo tmj-module:make-view [name] [module]
 
 Example:
 
-*User Module*
+*Chat Module*
 
 ```
 yo tmj-module:make Chat
@@ -238,9 +238,9 @@ yo tmj-module:make Chat
 |       │   │   └── chat-resource.factory.js
 │       │   ├── Providers
 |       │   │   └── chat.provider.js
-│       │   └── Services
+│       │   ├── Services
 |       │   │   └── chat.service.js
-│       │   └── Tests
+│       │   ├── Tests
 |       │   │   └── chat.test.js
 │       │   └── user.module.js
 │       └── Server/

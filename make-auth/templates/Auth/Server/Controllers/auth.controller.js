@@ -2,16 +2,36 @@
 
 var path = require('path'),
     root = path.dirname(require.main.filename),
-    passport = require('passport');
+    passport = require('passport'),
+    User = require(root + '/modules/User/Server/Entities/user.entity'),
+    PasswordReset = require(root + '/modules/PasswordReset/Server/Entities/passwordreset.entity');
 
 module.exports = function (method) {
     var methods = {
+        forgot: forgot,
         index: index,
         login: login,
-        register: register
+        register: register,
+        reset: reset,
     };
 
     return methods[method]();
+
+    function forgot() {
+        return function (req, res, next) {
+            if ( ! req.route.methods.get) {
+                User.findByEmail(req.body.email).then(function (user) {
+                    if (user) {
+                        PasswordReset.save(req.body);
+                    }
+
+                    return res.json(user);
+                });
+            } else {
+                res.sendFile(root + '/resources/views/auth/index.html');
+            }
+        }
+    }
 
     function index() {
         return function (req, res, next) {
@@ -24,7 +44,7 @@ module.exports = function (method) {
     function login() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
-                passport.authenticate('tmj', function (err, user, info) {
+                passport.authenticate('local', function (err, user, info) {
                     var throwErr = err || info;
 
                     if (throwErr) {
@@ -47,9 +67,26 @@ module.exports = function (method) {
     function register() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
-                console.log('TODO: Register');
+                User.save(req.body);
+                res.json(true);
             } else {
                 res.sendFile(root + '/resources/views/auth/index.html');
+            }
+        }
+    }
+
+    function reset() {
+        return function (req, res, next) {
+            if ( ! req.route.methods.get) {
+                PasswordReset.findByToken(req.body.token).then(function (passwordReset) {
+                    if (passwordReset) {
+                        User.updateByEmail(passwordReset.email, req.body.password);
+                    }
+
+                    res.json(passwordReset);
+                });
+            } else {
+                res.sendFile(root + '/resources/views/auth/index.html');    
             }
         }
     }
