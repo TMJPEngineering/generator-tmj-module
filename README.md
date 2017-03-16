@@ -248,7 +248,7 @@ To use view, you need to require `view` in a controller. For example in controll
 ```js
 var path = require('path'),
     root = path.dirname(require.main.filename),
-    dispatch = require(root + '/vendor/dispatch');
+    view = require(root + '/vendor/view');
 
 module.exports = function (method) {
     var methods = { ... };
