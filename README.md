@@ -238,9 +238,9 @@ yo tmj-module:make Chat
 |       │   │   └── chat-resource.factory.js
 │       │   ├── Providers
 |       │   │   └── chat.provider.js
-│       │   └── Services
+│       │   ├── Services
 |       │   │   └── chat.service.js
-│       │   └── Tests
+│       │   ├── Tests
 |       │   │   └── chat.test.js
 │       │   └── user.module.js
 │       └── Server/
