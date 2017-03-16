@@ -11,7 +11,12 @@ module.exports = function (app) {
 
     route.get('/login', 'AuthController@login');
     route.get('/register', 'AuthController@register');
+    route.get('/password/reset', 'AuthController@forgot');
+    route.get('/password/reset/:token', 'AuthController@reset');
 
     route.post('/login', 'AuthController@login');
     route.post('/register', 'AuthController@register');
+    route.post('/password/reset', 'AuthController@forgot');
+
+    route.update('/password/reset/:token', 'AuthController@reset');
 };
