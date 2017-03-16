@@ -62,6 +62,9 @@ module.exports = generator.extend({
             name: 'make-entity',
             description: 'Create new entity for the specified module'
         }, {
+            name: 'make-job',
+            description: 'Create new job for the specified module'
+        }, {
             name: 'make-middleware',
             description: 'Create new middleware for the specified module'
         }, {

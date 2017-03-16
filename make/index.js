@@ -31,6 +31,7 @@ module.exports = generator.extend({
                 $this.composeWith('tmj-module:make-angular-service', data);
                 $this.composeWith('tmj-module:make-controller', data);
                 $this.composeWith('tmj-module:make-entity', data);
+                $this.composeWith('tmj-module:make-job', data);
                 $this.composeWith('tmj-module:make-middleware', data);
                 $this.composeWith('tmj-module:make-routes', data);
                 $this.composeWith('tmj-module:make-schema', data);
