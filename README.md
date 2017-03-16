@@ -218,7 +218,7 @@ yo tmj-module:make-view [name] [module]
 
 Example:
 
-*User Module*
+*Chat Module*
 
 ```
 yo tmj-module:make Chat
