@@ -20,8 +20,13 @@ module.exports = function (method) {
     function forgot() {
         return function (req, res, next) {
             if ( ! req.route.methods.get) {
-                PasswordReset.save(req.body);
-                res.json(true);
+                User.findByEmail(req.body.email).then(function (user) {
+                    if (user) {
+                        PasswordReset.save(req.body);
+                    }
+
+                    return res.json(user);
+                });
             } else {
                 res.sendFile(root + '/resources/views/auth/index.html');
             }
