@@ -19,8 +19,9 @@ Mean Stack Module Generator using Yeoman
   - [Angular Service](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-service)
   - [Auth](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-auth-module)
   - [Controller](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-controller)
+  - [Entity](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-entity)
+  - [Job](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-job)
   - [Middleware](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-middleware)
-  - [Model](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-model)
   - [Routes](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-routes)
   - [Schema](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-schema)
   - [Test](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-test)
@@ -63,7 +64,7 @@ npm install -g generator-tmj-module
 
 ## List of Commands
 
-![Commands](https://cloud.githubusercontent.com/assets/21231662/23845060/f273a526-0800-11e7-9ab1-1f23f9f5d14b.png)
+![Commands](https://cloud.githubusercontent.com/assets/21231662/23987332/0ae14d6a-0a64-11e7-8d2d-730639ac25d2.png)
 
 **Note:**
 - `[name]` - Required
@@ -171,6 +172,34 @@ Create new entity for the specified module.
 yo tmj-module:make-entity [name] [module]
 ```
 
+### Creating a Job
+
+Create new job for the specified module.
+
+```
+yo tmj-module:make-job [name] [module]
+```
+
+To dispatch a job, you need to require `dispatch` in a controller. For example in a controller:
+
+```js
+var path = require('path'),
+    root = path.dirname(require.main.filename),
+    dispatch = require(root + '/vendor/dispatch');
+
+module.exports = function (method) {
+    var methods = { ... };
+
+    return methods[method]();
+
+    function name() {
+        return function (req, res, next) {
+            dispatch('Module::method', [req, res]);
+        }
+    }  
+};
+```
+
 ### Creating a Middleware
 
 Create new middleware for the specified module.
@@ -214,6 +243,26 @@ Create new html file for the specified module in views folder
 yo tmj-module:make-view [name] [module]
 ```
 
+To use view, you need to require `view` in a controller. For example in controller:
+
+```js
+var path = require('path'),
+    root = path.dirname(require.main.filename),
+    dispatch = require(root + '/vendor/dispatch');
+
+module.exports = function (method) {
+    var methods = { ... };
+
+    return methods[method]();
+
+    function name() {
+        return function (req, res, next) {
+            view('module.name', res);
+        }
+    }  
+};
+```
+
 ## Folder Structure
 
 Example:
@@ -236,6 +285,8 @@ yo tmj-module:make Chat
 │       │   ├── Factories
 |       │   │   ├── chat-manager.factory.js
 |       │   │   └── chat-resource.factory.js
+│       │   ├── Jobs
+|       │   │   └── chat.job.js
 │       │   ├── Providers
 |       │   │   └── chat.provider.js
 │       │   ├── Services
