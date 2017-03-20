@@ -7,7 +7,7 @@
 
 var path = require('path'),
     root = path.dirname(require.main.filename),
-    PasswordReset = require(root + '/modules/PasswordReset/Server/Entities/passwordreset.entity');
+    User = require(root + '/modules/User/Server/Entities/user.entity');
 
 module.exports = function (req, res) {
     User.save(req.body);
