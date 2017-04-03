@@ -25,7 +25,7 @@ module.exports = generator.extend({
     executing: function () {
         var data = {
             name: this.args.shift(),
-            module: this.args.shift(),
+            module: this.args.shift().camelCase(),
             year: new Date().getFullYear()
         };
 

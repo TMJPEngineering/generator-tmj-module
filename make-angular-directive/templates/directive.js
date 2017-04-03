@@ -8,15 +8,15 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .directive('<%= name.toLowerCase() %>', <%= name.toLowerCase() %>);
+        .directive('<%= name.camelCase().toLowerCase() %>', <%= name.camelCase().toLowerCase() %>);
 
-    <%= name.toLowerCase() %>.$inject = [];
+    <%= name.camelCase().toLowerCase() %>.$inject = [];
 
     /* @ngInject */
-    function <%= name.toLowerCase() %>() {
+    function <%= name.camelCase().toLowerCase() %>() {
         var directive = {
             bindToController: true,
-            controller: <%= name.ucfirst() %>Controller,
+            controller: <%= name.camelCase().ucfirst() %>Controller,
             controllerAs: 'vm',
             link: link,
             restrict: 'A',
@@ -29,5 +29,5 @@
     }
 
     /* @ngInject */
-    function <%= name.ucfirst() %>Controller() {}
+    function <%= name.camelCase().ucfirst() %>Controller() {}
 })();

@@ -270,46 +270,52 @@ Example:
 *Chat Module*
 
 ```
-yo tmj-module:make Chat
+yo tmj-module:make MyChat
+```
+
+or
+
+```
+yo tmj-module:make My-Chat
 ```
 
 ```
 ...
 ├── modules/
-│   └── Chat/
+│   └── MyChat/
 │       ├── Client/
 │       │   ├── Config
-|       │   │   └── chat.config.js
+|       │   │   └── mychat.config.js
 │       │   ├── Controllers
-|       │   │   └── chat.controller.js
+|       │   │   └── mychat.controller.js
 │       │   ├── Factories
 |       │   │   ├── chat-manager.factory.js
 |       │   │   └── chat-resource.factory.js
 │       │   ├── Jobs
-|       │   │   └── chat.job.js
+|       │   │   └── mychat.job.js
 │       │   ├── Providers
-|       │   │   └── chat.provider.js
+|       │   │   └── mychat.provider.js
 │       │   ├── Services
-|       │   │   └── chat.service.js
+|       │   │   └── mychat.service.js
 │       │   ├── Tests
-|       │   │   └── chat.test.js
+|       │   │   └── mychat.test.js
 │       │   └── user.module.js
 │       └── Server/
 │           ├── Controllers
-|           │   └── chat.controller.js
+|           │   └── mychat.controller.js
 │           ├── Entities
-|           │   └── chat.entity.js
+|           │   └── mychat.entity.js
 │           ├── Middlewares
-|           │   └── chat.middleware.js
+|           │   └── mychat.middleware.js
 │           ├── Routes
-|           │   └── chat.routes.js
+|           │   └── mychat.routes.js
 │           ├── Schemas
-|           │   └── chat.schema.js
+|           │   └── mychat.schema.js
 │           └── Tests
-|               └── chat.test.js
+|               └── mychat.test.js
 └── resources/
     └── views/
-        └── chat/
+        └── mychat/
             └── index.html
 ...
 ```

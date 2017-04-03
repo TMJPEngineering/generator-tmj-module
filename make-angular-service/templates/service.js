@@ -8,21 +8,21 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .service('<%= name.ucfirst() %>Service', <%= name.ucfirst() %>Service);
+        .service('<%= name.camelCase().ucfirst() %>Service', <%= name.camelCase().ucfirst() %>Service);
 
-    <%= name.ucfirst() %>Service.$inject = ['<%= name.ucfirst() %>Manager'];
+    <%= name.camelCase().ucfirst() %>Service.$inject = ['<%= name.camelCase().ucfirst() %>Manager'];
 
     /* @ngInject */
-    function <%= name.ucfirst() %>Service(<%= name.ucfirst() %>Manager) {
-        this.get = get<%= name.ucfirst() %>Manager;
-        this.set = set<%= name.ucfirst() %>Manager;
+    function <%= name.camelCase().ucfirst() %>Service(<%= name.camelCase().ucfirst() %>Manager) {
+        this.get = get<%= name.camelCase().ucfirst() %>Manager;
+        this.set = set<%= name.camelCase().ucfirst() %>Manager;
 
-        function get<%= name.ucfirst() %>Manager() {
-            return <%= name.ucfirst() %>Manager.get();
+        function get<%= name.camelCase().ucfirst() %>Manager() {
+            return <%= name.camelCase().ucfirst() %>Manager.get();
         }
 
-        function set<%= name.ucfirst() %>Manager(data) {
-            <%= name.ucfirst() %>Manager.set(data);
+        function set<%= name.camelCase().ucfirst() %>Manager(data) {
+            <%= name.camelCase().ucfirst() %>Manager.set(data);
         }
     }
 })();

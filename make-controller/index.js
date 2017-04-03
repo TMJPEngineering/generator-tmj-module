@@ -10,7 +10,10 @@ var generator = require('yeoman-generator'),
 module.exports = generator.extend({
     initializing: function () {
         error(this, 'controller', true);
-        var options = ['rest', 'plain'];
+        var options = [
+            'rest',
+            'plain'
+        ];
         option = 'controller';
         this.argument('name', { type: String, required: true });
         this.argument('module', { type: String, required: true });
@@ -26,7 +29,7 @@ module.exports = generator.extend({
     executing: function () {
         var data = {
             name: this.args.shift(),
-            module: this.args.shift(),
+            module: this.args.shift().camelCase(),
             year: new Date().getFullYear()
         };
 

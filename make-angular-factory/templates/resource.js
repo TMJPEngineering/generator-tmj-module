@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .factory('<%= name.ucfirst() %>', <%= name.ucfirst() %>);
+        .factory('<%= name.camelCase().ucfirst() %>', <%= name.camelCase().ucfirst() %>);
 
-    <%= name.ucfirst() %>.$inject = ['$resource'];
+    <%= name.camelCase().ucfirst() %>.$inject = ['$resource'];
 
     /* @ngInject */
-    function <%= name.ucfirst() %>($resource) {
+    function <%= name.camelCase().ucfirst() %>($resource) {
         var otherMethods = {
             update: {
                 'method': 'PUT',
@@ -23,6 +23,6 @@
             }
         };
 
-        return $resource('<%= name.toLowerCase() %>/:id', {id: '@id'}, otherMethods);
+        return $resource('<%= name.camelCase().toLowerCase() %>/:id', {id: '@id'}, otherMethods);
     }
 })();

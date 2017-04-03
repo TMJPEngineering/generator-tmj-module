@@ -8,12 +8,12 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .provider('<%= name.ucfirst() %>Provider', <%= name.ucfirst() %>Provider);
+        .provider('<%= name.camelCase().ucfirst() %>Provider', <%= name.camelCase().ucfirst() %>Provider);
 
-    <%= name.ucfirst() %>Provider.$inject = [];
+    <%= name.camelCase().ucfirst() %>Provider.$inject = [];
 
     /* @ngInject */
-    function <%= name.ucfirst() %>Provider() {
+    function <%= name.camelCase().ucfirst() %>Provider() {
         var <%= module.ucfirst() %> = [];
         
         var provider = {
@@ -29,17 +29,17 @@
 
         function factory() {
             var service = {
-                get: get<%= name.ucfirst() %>,
-                set: set<%= name.ucfirst() %>
+                get: get<%= name.camelCase().ucfirst() %>,
+                set: set<%= name.camelCase().ucfirst() %>
             };
 
             return service;
 
-            function get<%= name.ucfirst() %>() {
+            function get<%= name.camelCase().ucfirst() %>() {
                 return <%= module.ucfirst() %>;
             }
 
-            function set<%= name.ucfirst() %>(data) {
+            function set<%= name.camelCase().ucfirst() %>(data) {
                 <%= module.ucfirst() %> = data;
             }
 
