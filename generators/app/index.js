@@ -53,6 +53,9 @@ module.exports = generator.extend({
             name: 'make-angular-service',
             description: 'Create new angular service for the specified module'
         }, {
+            name: 'make-angular-submodule',
+            description: 'Generate new module in client side for the specified module'
+        }, {
             name: 'make-auth',
             description: 'Scaffold basic login and registration views'
         }, {
