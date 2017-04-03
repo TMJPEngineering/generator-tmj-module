@@ -1,9 +1,14 @@
 (function () {
     'use strict';
 
-    angular.module('auth')
+    angular
+        .module('auth')
         .controller('AuthController', AuthController);
-    AuthController.$inject = ['AuthFactory', '$state'];
+
+    AuthController.$inject = [
+        'AuthFactory',
+        '$state'
+    ];
 
     function AuthController(AuthFactory, $state) {
         var vm = this;
@@ -18,11 +23,18 @@
         vm.reset = reset;
 
         function login() {
-            AuthFactory.login({ email: vm.email, password: vm.password });
+            AuthFactory.login({
+                email: vm.email,
+                password: vm.password 
+            });
         }
 
         function register() {
-            AuthFactory.register({ name: vm.name, email: vm.email, password: vm.password });
+            AuthFactory.register({
+                name: vm.name,
+                email: vm.email,
+                password: vm.password
+            });
         }
 
         function forgot() {
@@ -30,7 +42,11 @@
         }
 
         function reset() {
-            AuthFactory.reset({ email: vm.email, password: vm.password, token: $state.params.token });
+            AuthFactory.reset({
+                email: vm.email,
+                password: vm.password,
+                token: $state.params.token
+            });
         }
     }
 })();

@@ -8,14 +8,14 @@
 
     angular
         .module('<%= module.toLowerCase() %>')
-        .controller('<%= name.ucfirst() %>Controller', <%= name.ucfirst() %>Controller);
+        .controller('<%= name.camelCase().ucfirst() %>Controller', <%= name.camelCase().ucfirst() %>Controller);
 
-    <%= name.ucfirst() %>Controller.$inject = ['<%= name.ucfirst() %>Manager', '<%= name.ucfirst() %>', '<%= name.ucfirst() %>Service'];
+    <%= name.camelCase().ucfirst() %>Controller.$inject = ['<%= name.camelCase().ucfirst() %>Manager', '<%= name.camelCase().ucfirst() %>', '<%= name.camelCase().ucfirst() %>Service'];
 
     /* @ngInject */
-    function <%= name.ucfirst() %>Controller(<%= name.ucfirst() %>Manager, <%= name.ucfirst() %>, <%= name.ucfirst() %>Service) {
+    function <%= name.camelCase().ucfirst() %>Controller(<%= name.camelCase().ucfirst() %>Manager, <%= name.camelCase().ucfirst() %>, <%= name.camelCase().ucfirst() %>Service) {
         var vm = this;
-        vm.<%= name.toLowerCase() %> = [];
+        vm.<%= name.camelCase().toLowerCase() %> = [];
 
         activate();
 
