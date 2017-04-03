@@ -20,7 +20,7 @@ module.exports = generator.extend({
             this.arguments.forEach(function (module) {
                 module = module.ucfirst();
                 var data = {
-                    arguments: [module, module]
+                    arguments: [module.camelCase(), module]
                 };
 
                 $this.composeWith('tmj-module:make-angular-config', data);

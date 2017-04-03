@@ -1,11 +1,17 @@
 (function () {
     'use strict';
 
-    angular.module('auth')
+    angular
+        .module('auth')
         .config(config);
-    config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+    config.$inject = [
+        '$stateProvider',
+        '$urlRouterProvider',
+        '$locationProvider'
+    ];
+
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/login');
         $stateProvider
             .state('home', {

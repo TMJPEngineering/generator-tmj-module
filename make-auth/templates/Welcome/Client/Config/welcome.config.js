@@ -6,10 +6,15 @@
 (function () {
     'use strict';
 
-    angular.module('welcome')
+    angular
+        .module('welcome')
         .config(config);
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+    config.$inject = [
+        '$stateProvider',
+        '$urlRouterProvider',
+        '$locationProvider'
+    ];
 
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
