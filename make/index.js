@@ -41,9 +41,6 @@ module.exports = generator.extend({
                     $this.composeWith('tmj-module:make-angular-module', data);
                     $this.composeWith('tmj-module:make-angular-provider', data);
                     $this.composeWith('tmj-module:make-angular-service', data);
-                    $this.composeWith('tmj-module:make-view', {
-                        arguments: ['index', module]
-                    });
                 }
 
                 if (hasOption === false || $this.options.kind === 'server') {
@@ -53,6 +50,9 @@ module.exports = generator.extend({
                     $this.composeWith('tmj-module:make-middleware', data);
                     $this.composeWith('tmj-module:make-routes', data);
                     $this.composeWith('tmj-module:make-schema', data);
+                    $this.composeWith('tmj-module:make-view', {
+                        arguments: ['index', module]
+                    });
                 }
 
                 $this.composeWith('tmj-module:make-test', data);

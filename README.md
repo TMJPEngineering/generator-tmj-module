@@ -10,6 +10,7 @@ Mean Stack Module Generator using Yeoman
   - [Globally](https://github.com/TMJPEngineering/generator-tmj-module#globally)
 - [List of Commands](https://github.com/TMJPEngineering/generator-tmj-module#list-of-commands)
   - [Module](https://github.com/TMJPEngineering/generator-tmj-module#creating-a-module)
+  - [Angular Sub Module](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-sub-module)
   - [Angular Config](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-config)
   - [Angular Controller](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-controller)
   - [Angular Directive](https://github.com/TMJPEngineering/generator-tmj-module#creating-an-angular-directive)
@@ -71,6 +72,7 @@ npm install -g generator-tmj-module
 - `[module]` - Required
 - `[--option]` - Optional
 - `[--kind]` - Optional
+- `[--module]` - Required
 
 ### Creating a Module
 
@@ -89,6 +91,20 @@ yo tmj-module:make Blog Chat Post
 **Kinds**
 - `server`
 - `client`
+
+### Creating an Angular Sub Module
+
+To create a new sub module, you can simply run:
+
+```
+yo tmj-module:make-angular-submodule [name] [--module=value]
+```
+
+To create multiples modules, you can simply run by example:
+
+```
+yo tmj-module:make-angular-submodule Blog Chat Post --module=App
+```
 
 ### Creating an Angular Config
 
