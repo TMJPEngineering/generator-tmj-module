@@ -70,13 +70,14 @@ npm install -g generator-tmj-module
 - `[name]` - Required
 - `[module]` - Required
 - `[--option]` - Optional
+- `[--kind]` - Optional
 
 ### Creating a Module
 
 To create a new module, you can simply run:
 
 ```
-yo tmj-module:make [name]
+yo tmj-module:make [name] [--kind=value]
 ```
 
 To create multiples modules, you can simply run by example:
@@ -84,6 +85,10 @@ To create multiples modules, you can simply run by example:
 ```
 yo tmj-module:make Blog Chat Post
 ```
+
+**Kinds**
+- `server`
+- `client`
 
 ### Creating an Angular Config
 
@@ -232,8 +237,12 @@ yo tmj-module:make-schema [name] [module]
 Create new test for the specified module.
 
 ```
-yo tmj-module:make-test [name] [module]
+yo tmj-module:make-test [name] [module] [--kind=value]
 ```
+
+**Kinds**
+- `server`
+- `client`
 
 ### Creating a View
 
@@ -259,7 +268,7 @@ module.exports = function (method) {
         return function (req, res, next) {
             view('module.name', res);
         }
-    }  
+    }
 };
 ```
 
